@@ -14,7 +14,6 @@ define(
                 add_url:"add",
                 input_value:''
             });
-
             //リストへの追加処理
             this.addList = function () {
                 console.log("addList");
@@ -36,10 +35,6 @@ define(
                         }
                     }});
             }
-
-            this.before("initialize", function () {
-                console.log("before initialize.");
-            });
             this.after("initialize", function () {
                 this.on("click", this.addList);
             });

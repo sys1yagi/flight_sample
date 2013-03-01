@@ -91,10 +91,7 @@ define(
                 this.on("appendTodoList", this.appendTodoList);
                 this.on("prependTodoList", this.prependTodoList);
                 this.on("appendedListItem", this.appendedListItem);
-
-                //remove
                 this.on("removeListItem", this.removeListItem);
-                //update
                 this.on("updateListItem", this.updateListItem);
             });
         }
