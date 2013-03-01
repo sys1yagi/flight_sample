@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+            .container
+                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='#') Project name
+                .nav-collapse.collapse
+                    ul.nav
+                        li.active
+                            a(href='#') Home
+                        li
+                            a(href='/about') About
+                        li
+                            a(href='/contact') Contact
+    .container
+        .hero-unit
+            h1 Flight Sample
+            p
+                | An event-driven web framework, from Twitter.
+                br
+                | Sample of TODO List.
+            .input-append
+                input.input-xxlarge(type="text", id="todo",placeholder="Add Todo...")
+                button.btn(type="button", id="add_list") add list
+            hr
+            .container(id="list")
+
+block footer
+  script(type="text/javascript")
+    require(['js/pages/index'], function(initialize) {
+          initialize();
+        });

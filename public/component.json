@@ -1,0 +1,10 @@
+{
+    "name":"blank",
+    "version":"0.0.1",
+    "dependencies":{
+        "jquery":"1.8.3",
+        "flight":"~1.0.0",
+        "requirejs":"2.1.1",
+        "bootstrap.css":"*"
+    }
+}

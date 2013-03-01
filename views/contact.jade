@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+            .container
+                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='/') Project name
+                .nav-collapse.collapse
+                    ul.nav
+                        li
+                            a(href='/') Home
+                        li
+                            a(href='/about') About
+                        li.active
+                            a(href='/#') Contact
+    .container
+        .hero-unit
+            h1 Contact
+            hr
+            blockquote.twitter-tweet(lang='ja')
+                p わっふるわっふる
+                    | — 八木さん (@sys1yagi)
+                    a(href='https://twitter.com/sys1yagi/status/307322523526238211') 2013年3月1日
+                script(async='async', src='//platform.twitter.com/widgets.js', charset='utf-8')
+block footer
+

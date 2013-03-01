@@ -1,0 +1,21 @@
+var mongoose = require('mongoose');
+var db = mongoose.connect('mongodb://localhost/flight_sample');
+
+var TodoSchema = new mongoose.Schema({
+    todo:{type:String}, addDate:{type:Date}, tags:[String], status:{type:Boolean}, order:{type:Number}, parent:{type:String}
+});
+
+var Todo = db.model('todo', TodoSchema);
+
+exports.Todo = Todo;
+
+exports.createModel = function (todo, addDate, tags, status, order, parent) {
+    return {
+        "todo":todo,
+        "addDate":addDate,
+        "tags":tags,
+        "status":status,
+        "order":order,
+        "parent":parent
+    };
+}

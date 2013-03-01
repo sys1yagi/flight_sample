@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+            .container
+                button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='/') Project name
+                .nav-collapse.collapse
+                    ul.nav
+                        li
+                            a(href='/') Home
+                        li.active
+                            a(href='/#') About
+                        li
+                            a(href='/contact') Contact
+    .container
+        .hero-unit
+            h1 About
+            p
+                | Flightのサンプル。Todoリストアプリ的な。
+            hr
+            p
+                b 使い方
+                br
+                | hogehoge
+            p
+                b 機能
+                ul
+                    li moge
+                    li soge
+                    li hoge
+                    li おらおら
+
+
+block footer
+
