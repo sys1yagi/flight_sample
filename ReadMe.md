@@ -35,7 +35,7 @@ TODO
 
 > mongod --dbpath hoge
 
-> node app.js
+> ./run_server.sh
 
 
 ### Ubuntu
