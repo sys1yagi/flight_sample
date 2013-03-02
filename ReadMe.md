@@ -35,7 +35,7 @@ TODO
 
 > mongod --dbpath hoge
 
-> ./run_server.sh
+> ./run_server.sh start
 
 
 ### Ubuntu
