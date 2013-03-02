@@ -15,6 +15,17 @@ if [ $? -ne 0 ] ; then
 	ISERROR=1
 fi
 
-./node_modules/forever/bin/forever start app.js
-echo "OK!"
+if [ $ISERROR == 1 ] ; then
+	exit
+fi
+
+if [ "$1" == "start" ] ; then
+    echo "server start"
+    ./node_modules/forever/bin/forever start app.js
+elif [ "$1" == "restart" ] ; then
+    ./node_modules/forever/bin/forever stopall
+    ./node_modules/forever/bin/forever start app.js
+elif [ "$1" == "stop" ] ; then
+    ./node_modules/forever/bin/forever stopall
+fi
 
