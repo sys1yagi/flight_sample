@@ -1,13 +1,21 @@
-Node.jsのプロジェクトだお(^q^)
+This is the Flight sample applicaton.<br/>
+The back-end uses Mongodb and Node.js.<br/>
+Simple Todo list application.<br/>
 
-以下が必要
+## requirement
+
 * node.js
 * npm
-* bower ( npm install -g bower )
+* bower
 * mongodb
 
+setup
+======
 
-多分以下で動く
+### Mac
+
+TODO
+
 > git clone https://github.com/sys1yagi/flight_sample.git
 
 > cd flight_sample
@@ -23,4 +31,17 @@ Node.jsのプロジェクトだお(^q^)
 > mongod --dbpath hoge
 
 > node app.js
+
+
+### Ubuntu
+TODO
+sudo apt-get install mongodb-server
+
+
+### Windows
+TODO
+
+run
+====
+
 

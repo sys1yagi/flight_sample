@@ -29,8 +29,11 @@ function validateToken(req, res){
     return true;
 }
 
-
-//追加
+/**
+ * Todoを追加する
+ * @param req
+ * @param res
+ */
 exports.add_todo = function (req, res) {
     if(!validateToken(req, res)){
         return;
@@ -47,7 +50,8 @@ exports.add_todo = function (req, res) {
         false,
         0,
         null,
-        []
+        [],
+        null
     );
     //TODO set order
     record.order = 0;
@@ -118,6 +122,7 @@ exports.update_todo = function (req, res) {
             var param_status = req.query['status'] === "true";
             var param_parent = req.query['parent'];
             var param_order = req.query['order'];
+            var param_category = req.query['category'];
             if(param_todo !== undefined){
                 this.todo = param_todo;
             }
@@ -181,8 +186,5 @@ exports.move_to = function (req, res) {
     }
     console.log("move_to!");
     writeJsonHeader(res);
-
-
-
     res.end();
 }
